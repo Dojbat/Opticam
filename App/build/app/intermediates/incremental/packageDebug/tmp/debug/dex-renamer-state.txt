@@ -1,8 +1,8 @@
-#Wed Apr 02 22:38:10 ICT 2025
-base.0=/Users/non/StudioProjects/urdproject/build/app/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/Users/non/StudioProjects/urdproject/build/app/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/Users/non/StudioProjects/urdproject/build/app/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
-base.3=/Users/non/StudioProjects/urdproject/build/app/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
+#Thu Apr 03 23:15:26 ICT 2025
+base.0=/Users/phurich/Documents/CMKL/Spring_2025/URD1/Opticam/App/build/app/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/phurich/Documents/CMKL/Spring_2025/URD1/Opticam/App/build/app/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/Users/phurich/Documents/CMKL/Spring_2025/URD1/Opticam/App/build/app/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.3=/Users/phurich/Documents/CMKL/Spring_2025/URD1/Opticam/App/build/app/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=1/classes.dex

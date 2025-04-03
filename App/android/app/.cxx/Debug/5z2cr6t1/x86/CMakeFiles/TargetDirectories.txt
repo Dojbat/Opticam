@@ -1,0 +1,2 @@
+/Users/phurich/Documents/CMKL/Spring_2025/URD1/Opticam/App/android/app/.cxx/Debug/5z2cr6t1/x86/CMakeFiles/edit_cache.dir
+/Users/phurich/Documents/CMKL/Spring_2025/URD1/Opticam/App/android/app/.cxx/Debug/5z2cr6t1/x86/CMakeFiles/rebuild_cache.dir
