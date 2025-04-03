@@ -2,7 +2,7 @@ from ultralytics import YOLO
 
 if __name__ == '__main__':
     # Specify the dataset path
-    dataset_path = "dataset"  # Update if necessary
+    dataset_path = "datanew"  # Update if necessary
 
     # Load and train YOLOv8 model
     model = YOLO("yolov8s.pt")
