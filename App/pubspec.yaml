@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^2.0.17
   stroke_text: ^1.0.0
   google_nav_bar: ^5.0.7
+  video_player: ^2.9.5
 
 dev_dependencies:
   flutter_test:
@@ -93,6 +94,10 @@ flutter:
     - assets/images/Google.png
     - assets/images/LINE.png
     - assets/images/Cam.png
+    - assets/images/FrontCam.png
+    - assets/images/BackCam.png
+    - assets/videos/FrontVideo.mp4
+    - assets/videos/BackVideo.mp4
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
