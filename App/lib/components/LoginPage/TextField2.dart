@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TextField2 extends StatelessWidget {
-  const TextField2({super.key});
+  final TextEditingController controller;
+  const TextField2({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class TextField2 extends StatelessWidget {
                   ],
                 ),
                 child: TextField(
-                  controller: TextEditingController(),
+                  controller: controller,
                   obscureText: true,
                   decoration: InputDecoration(
                     filled: true,

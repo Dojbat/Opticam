@@ -2,19 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:urdproject/pages/login.dart';
 
 class SignUpButton extends StatelessWidget {
-  const SignUpButton({super.key});
+  final VoidCallback onTap;
+  const SignUpButton({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 43, top: 30),
       child: GestureDetector(
-        onTap: () {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (context) => LogInPage()),
-          );
-        },
+        onTap: onTap,
         child: Container(
           width: 327,
           height: 60,

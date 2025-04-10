@@ -26,10 +26,10 @@ class _LogInPageState extends State<LogInPage> {
   final TextEditingController _passwordController = TextEditingController();
   bool _isLoading = false;
 
-  // handle login
+
   Future<void> login() async { 
-    final username = _usernameController.text;
-    final password = _passwordController.text;
+    final username = _usernameController.text.trim();
+    final password = _passwordController.text.trim();
 
     if (username.isEmpty || password.isEmpty) // Check if the username and password are empty
     { 
@@ -88,23 +88,8 @@ class _LogInPageState extends State<LogInPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               LoginLogo(),
-              // TextField1(),
-              // TextField2(),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: TextField(
-                  controller: _usernameController,
-                  decoration: InputDecoration(labelText: 'Username'),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: TextField(
-                  controller: _passwordController,
-                  decoration: InputDecoration(labelText: 'Password'),
-                  obscureText: true,
-                ),
-              ),
+              TextField1(controller: _usernameController),
+              TextField2(controller: _passwordController),
               Text1(),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,12 +102,10 @@ class _LogInPageState extends State<LogInPage> {
                   ? Center(child: CircularProgressIndicator())
                   : Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                      child: ElevatedButton(
-                        onPressed: login,
-                        child: Text('Login'),
+                      child: LoginButton(
+                        onTap: login,
                       ),
                     ),
-              // LoginButton()
             ],
           ),
         ],

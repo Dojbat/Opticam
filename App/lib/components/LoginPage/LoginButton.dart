@@ -2,19 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:urdproject/pages/home.dart';
 
 class LoginButton extends StatelessWidget {
-  const LoginButton({super.key});
+  final VoidCallback onTap;
+  const LoginButton({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 25, left: 40),
       child: GestureDetector(
-        onTap: () {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (context) => HomePage()),
-          );
-        },
+        onTap: onTap, 
         child: Container(
           width: 327,
           height: 60,
