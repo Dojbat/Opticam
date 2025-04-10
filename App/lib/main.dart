@@ -12,7 +12,7 @@ import 'package:http/http.dart' as http; // import the https
 import 'dart:convert'; // use to encode decode json file from the SQL
 
 void main() {
-  fetchData(); // call to fetch the SQL database
+  // fetchData(); // call to fetch the SQL database
   runApp(const MyApp());
 }
 
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Roboto'),
-      home: SignUpPage()
+      home: WelcomePage()
     );
   }
 }

@@ -8,7 +8,10 @@ import 'package:urdproject/components/LoginPage/Checkbox.dart';
 import 'package:urdproject/components/LoginPage/LoginText2.dart';
 import 'package:urdproject/components/LoginPage/LoginButton.dart';
 import 'package:urdproject/components/WelcomePage/WelcomeBg.dart';
+import 'package:urdproject/pages/home.dart';
 import 'package:urdproject/pages/welcome.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class LogInPage extends StatefulWidget {
   const LogInPage({super.key});
@@ -19,6 +22,59 @@ class LogInPage extends StatefulWidget {
 
 class _LogInPageState extends State<LogInPage> {
   bool? isChecked = false;
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  bool _isLoading = false;
+
+  // handle login
+  Future<void> login() async { 
+    final username = _usernameController.text;
+    final password = _passwordController.text;
+
+    if (username.isEmpty || password.isEmpty) // Check if the username and password are empty
+    { 
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Please enter both username and password')),
+      );
+      return;
+    }
+
+    setState(()
+    {
+      _isLoading = true;
+    });
+
+    try {
+      final response = await http.post(
+        Uri.parse('http://10.0.2.2:3000/login'), // access the login from server.js
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode({'username': username, 'password': password}), // encode the username and password into json
+      );
+
+      if (response.statusCode == 200) { // Check if the response is successful
+        final data = json.decode(response.body);
+        print('Fetched Login Data: $data');
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(data['message'])),
+        );
+
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage())); // Navigate to the home page on successful login
+      } else {
+        final data = json.decode(response.body);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(data['message'])),
+        );
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error: $e')),
+      );
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +88,23 @@ class _LogInPageState extends State<LogInPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               LoginLogo(),
-              TextField1(),
-              TextField2(),
+              // TextField1(),
+              // TextField2(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: TextField(
+                  controller: _usernameController,
+                  decoration: InputDecoration(labelText: 'Username'),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: TextField(
+                  controller: _passwordController,
+                  decoration: InputDecoration(labelText: 'Password'),
+                  obscureText: true,
+                ),
+              ),
               Text1(),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,7 +113,16 @@ class _LogInPageState extends State<LogInPage> {
                   Text2(),
                 ],
               ),
-              LoginButton()
+              _isLoading
+                  ? Center(child: CircularProgressIndicator())
+                  : Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: ElevatedButton(
+                        onPressed: login,
+                        child: Text('Login'),
+                      ),
+                    ),
+              // LoginButton()
             ],
           ),
         ],
