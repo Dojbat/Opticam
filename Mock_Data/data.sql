@@ -8,19 +8,20 @@ CREATE TABLE users (
 );
 
 CREATE TABLE dashcams (
-   serial_number VARCHAR(50) UNIQUE NOT NULL,
-   firmware_version VARCHAR(50) NOT NULL,
-   status VARCHAR(50) [NOTE: This should be an ENUM with values: 'active', 'inactive', 'deactivated'],
-   last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    serial_number VARCHAR(50) UNIQUE NOT NULL,
+    firmware_version VARCHAR(50) NOT NULL,
+    status ENUM('active', 'inactive', 'deactivated') NOT NULL, -- Status ENUM
+    last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE videos (
     video_id SERIAL PRIMARY KEY,
-    dashcam_serial VARCHAR(50) UNIQUE NOT NULL,
+    dashcam_serial VARCHAR(50) NOT NULL,
     start_time TIMESTAMP NOT NULL,
     end_time TIMESTAMP NOT NULL,
-    local_path TEXT [NOTE: local file path on dashcam],
-    event_type VARCHAR(50) [NOTE: This should be an ENUM with values: 'normal', 'collision', 'sudden_brake'],
+    local_path TEXT, -- Local file path on dashcam
+    event_type ENUM('normal', 'drowsy') NOT NULL, -- Event type ENUM
+    video_data LONGBLOB,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

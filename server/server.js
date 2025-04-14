@@ -2,15 +2,14 @@ const express = require('express'); // creats HTTP server to handles request
 const mysql = require('mysql2'); // let node.js to connect with mysql
 const cors = require('cors'); // Import CORS to allow cross-origin requests
 const bcrypt = require('bcrypt');
-
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+// curl http://localhost:3000/users
 const db = mysql.createConnection({
-    host: 'localhost', // set the host as localhost
+    host: '127.0.0.1', // set the host as localhost
     user: 'root',
-    password: 'phurich40227', // Phu's SQL password
+    password: '', // Phu's SQL password
     database: 'opticam' // 'name of the database' access the database
 });
 
@@ -96,6 +95,63 @@ app.post('/login', (req, res) => {
         }
     });
 });
+
+// Endpoint to retrieve collision videos for a specific user
+app.get('/collision-videos/:userId', (req, res) => {
+    const userId = req.params.userId;
+
+    // Query to get the user's dashcam_serial
+    const userQuery = 'SELECT dashcam_serial FROM users WHERE id = ?';
+
+    db.query(userQuery, [userId], (err, userResult) => {
+        if (err) {
+            console.error('Error retrieving user dashcam_serial:', err);
+            return res.status(500).json({ message: 'Failed to retrieve user data' });
+        }
+
+        if (userResult.length === 0) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        const dashcamSerial = userResult[0].dashcam_serial;
+        console.log('Dashcam Serial:', dashcamSerial);
+
+        // Query to get collision videos for the user's dashcam
+        const videoQuery = `
+            SELECT video_id, dashcam_serial, local_path, event_type, start_time, end_time, video_data, created_at
+            FROM videos
+            WHERE event_type = 'drowsy' AND dashcam_serial = ?
+            ORDER BY created_at DESC
+        `;
+
+        db.query(videoQuery, [dashcamSerial], (err, videoResults) => {
+            if (err) {
+                console.error('Error retrieving collision videos:', err);
+                return res.status(500).json({ message: 'Failed to retrieve drowsy videos' });
+            }
+
+            if (videoResults.length > 0) {
+                // Encode video_data as base64
+                const videos = videoResults.map(video => ({
+                    video_id: video.video_id,
+                    dashcam_serial: video.dashcam_serial,
+                    local_path: video.local_path,
+                    event_type: video.event_type,
+                    start_time: video.start_time,
+                    end_time: video.end_time,
+                    created_at: video.created_at,
+                    video_data: video.video_data ? video.video_data.toString('base64') : null // Encode binary data
+                }));
+
+                console.log('Collision videos retrieved for user:', videos);
+                res.json({ success: true, videos });
+            } else {
+                res.json({ success: false, message: 'No drowsy videos found for this user' });
+            }
+        });
+    });
+});
+
 
 app.listen(3000, () => console.log('Server started on port 3000'));
 
