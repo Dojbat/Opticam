@@ -17,13 +17,15 @@ class LiveCamPage extends StatelessWidget {
       body: Stack(
         children: [
           HomeBackground(),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Video1(),
-              Video2(),
-            ],
-          )
+          SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Video1(),
+                Video2(),
+              ],
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: DeviceBottomNavigationBar()

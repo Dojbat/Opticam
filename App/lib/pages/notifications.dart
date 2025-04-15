@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:urdproject/components/HomePage/HomeBg.dart';
+import 'package:urdproject/components/NotificationsPage/Date.dart';
 import 'package:urdproject/components/NotificationsPage/NotificationsBottomNavigationBar.dart';
+import 'package:urdproject/components/NotificationsPage/NotificationsList.dart';
 import 'package:urdproject/components/NotificationsPage/NotificationsText1.dart';
 
 class NotificationsPage extends StatelessWidget {
@@ -14,7 +16,9 @@ class NotificationsPage extends StatelessWidget {
       body: Stack(
         children: [
           HomeBackground(),
-          Text1()
+          //Text1()
+          Date(),
+          NotificationsList(),
         ],
       ),
       bottomNavigationBar: NotificationsBottomNavigationBar(),
