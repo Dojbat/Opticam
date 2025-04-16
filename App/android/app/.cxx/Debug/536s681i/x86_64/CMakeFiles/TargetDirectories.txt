@@ -1,0 +1,2 @@
+/Users/niner9/Documents/GitHub/Opticam/App/android/app/.cxx/Debug/536s681i/x86_64/CMakeFiles/edit_cache.dir
+/Users/niner9/Documents/GitHub/Opticam/App/android/app/.cxx/Debug/536s681i/x86_64/CMakeFiles/rebuild_cache.dir

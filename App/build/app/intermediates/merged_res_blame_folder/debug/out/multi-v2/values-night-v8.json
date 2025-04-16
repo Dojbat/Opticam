@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.urdproject.app-mergeDebugResources-24:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.urdproject.app-mergeDebugResources-25:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/phurich/Documents/CMKL/Spring_2025/URD1/Opticam/App/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/niner9/Documents/GitHub/Opticam/App/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
