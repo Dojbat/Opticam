@@ -26,6 +26,7 @@ MERGED from /Users/niner9/Documents/GitHub/Opticam/App/android/app/src/main/Andr
 INJECTED from /Users/niner9/Documents/GitHub/Opticam/App/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/niner9/Documents/GitHub/Opticam/App/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/niner9/Documents/GitHub/Opticam/App/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+MERGED from [:path_provider_android] /Users/niner9/Documents/GitHub/Opticam/App/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:video_player_android] /Users/niner9/Documents/GitHub/Opticam/App/build/video_player_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.fragment:fragment:1.7.1] /Users/niner9/.gradle/caches/transforms-3/dce57014d0be1c15d65a0e424ea1460d/transformed/fragment-1.7.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.media3:media3-extractor:1.4.1] /Users/niner9/.gradle/caches/transforms-3/969b593f7da8aa771810ff4618f9adc3/transformed/jetified-media3-extractor-1.4.1/AndroidManifest.xml:17:1-22:12
@@ -55,7 +56,6 @@ MERGED from [androidx.core:core:1.13.1] /Users/niner9/.gradle/caches/transforms-
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/niner9/.gradle/caches/transforms-3/db958715b2966b0fd9a28b053c4b7f44/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/niner9/.gradle/caches/transforms-3/44f2db56004bf7a676ecb857f4f97c16/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/niner9/.gradle/caches/transforms-3/5ec5e1bf6ea57681bcf847f7b23610e3/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/niner9/.gradle/caches/transforms-3/8471381137dfa3ccd7f0f06477c0dc43/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/niner9/.gradle/caches/transforms-3/de9027c1225608b421d12ea04a4c47ae/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/niner9/.gradle/caches/transforms-3/4137eaf763c7e5913f46dc8071c9b9e0/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.2.0] /Users/niner9/.gradle/caches/transforms-3/43c79437964b838b4a3d4635125275ce/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:17:1-22:12
@@ -64,6 +64,7 @@ MERGED from [androidx.exifinterface:exifinterface:1.3.6] /Users/niner9/.gradle/c
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/niner9/.gradle/caches/transforms-3/2c148c445ebad817b5ff5e7c4e239013/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/niner9/.gradle/caches/transforms-3/da6afdb07bcdd2e197537eb1f4f98d31/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.window.extensions.core:core:1.0.0] /Users/niner9/.gradle/caches/transforms-3/d80e9382c8bf12b704a2710042ea4109/transformed/jetified-core-1.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/niner9/.gradle/caches/transforms-3/8471381137dfa3ccd7f0f06477c0dc43/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /Users/niner9/.gradle/caches/transforms-3/64f980f935fe4822f151c90436e7e25e/transformed/jetified-relinker-1.4.5/AndroidManifest.xml:2:1-7:12
 	package
 		INJECTED from /Users/niner9/Documents/GitHub/Opticam/App/android/app/src/debug/AndroidManifest.xml
@@ -95,6 +96,8 @@ uses-sdk
 INJECTED from /Users/niner9/Documents/GitHub/Opticam/App/android/app/src/debug/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/niner9/Documents/GitHub/Opticam/App/android/app/src/debug/AndroidManifest.xml
 INJECTED from /Users/niner9/Documents/GitHub/Opticam/App/android/app/src/debug/AndroidManifest.xml
+MERGED from [:path_provider_android] /Users/niner9/Documents/GitHub/Opticam/App/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] /Users/niner9/Documents/GitHub/Opticam/App/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:video_player_android] /Users/niner9/Documents/GitHub/Opticam/App/build/video_player_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:video_player_android] /Users/niner9/Documents/GitHub/Opticam/App/build/video_player_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment:1.7.1] /Users/niner9/.gradle/caches/transforms-3/dce57014d0be1c15d65a0e424ea1460d/transformed/fragment-1.7.1/AndroidManifest.xml:5:5-44
@@ -153,8 +156,6 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/niner9/.gradle/c
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/niner9/.gradle/caches/transforms-3/44f2db56004bf7a676ecb857f4f97c16/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/niner9/.gradle/caches/transforms-3/5ec5e1bf6ea57681bcf847f7b23610e3/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/niner9/.gradle/caches/transforms-3/5ec5e1bf6ea57681bcf847f7b23610e3/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/niner9/.gradle/caches/transforms-3/8471381137dfa3ccd7f0f06477c0dc43/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/niner9/.gradle/caches/transforms-3/8471381137dfa3ccd7f0f06477c0dc43/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/niner9/.gradle/caches/transforms-3/de9027c1225608b421d12ea04a4c47ae/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/niner9/.gradle/caches/transforms-3/de9027c1225608b421d12ea04a4c47ae/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/niner9/.gradle/caches/transforms-3/4137eaf763c7e5913f46dc8071c9b9e0/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
@@ -171,6 +172,8 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/niner9/.gradle/cac
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/niner9/.gradle/caches/transforms-3/da6afdb07bcdd2e197537eb1f4f98d31/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.window.extensions.core:core:1.0.0] /Users/niner9/.gradle/caches/transforms-3/d80e9382c8bf12b704a2710042ea4109/transformed/jetified-core-1.0.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.window.extensions.core:core:1.0.0] /Users/niner9/.gradle/caches/transforms-3/d80e9382c8bf12b704a2710042ea4109/transformed/jetified-core-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/niner9/.gradle/caches/transforms-3/8471381137dfa3ccd7f0f06477c0dc43/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/niner9/.gradle/caches/transforms-3/8471381137dfa3ccd7f0f06477c0dc43/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /Users/niner9/.gradle/caches/transforms-3/64f980f935fe4822f151c90436e7e25e/transformed/jetified-relinker-1.4.5/AndroidManifest.xml:5:5-43
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /Users/niner9/.gradle/caches/transforms-3/64f980f935fe4822f151c90436e7e25e/transformed/jetified-relinker-1.4.5/AndroidManifest.xml:5:5-43
 	android:targetSdkVersion

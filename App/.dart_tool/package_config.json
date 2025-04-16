@@ -56,6 +56,12 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "ffi",
+      "rootUri": "file:///Users/niner9/.pub-cache/hosted/pub.dev/ffi-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///Users/niner9/Documents/dev/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -164,8 +170,50 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "path_provider",
+      "rootUri": "file:///Users/niner9/.pub-cache/hosted/pub.dev/path_provider-2.1.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "path_provider_android",
+      "rootUri": "file:///Users/niner9/.pub-cache/hosted/pub.dev/path_provider_android-2.2.16",
+      "packageUri": "lib/",
+      "languageVersion": "3.6"
+    },
+    {
+      "name": "path_provider_foundation",
+      "rootUri": "file:///Users/niner9/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "path_provider_linux",
+      "rootUri": "file:///Users/niner9/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "path_provider_platform_interface",
+      "rootUri": "file:///Users/niner9/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "path_provider_windows",
+      "rootUri": "file:///Users/niner9/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "petitparser",
       "rootUri": "file:///Users/niner9/.pub-cache/hosted/pub.dev/petitparser-6.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "platform",
+      "rootUri": "file:///Users/niner9/.pub-cache/hosted/pub.dev/platform-3.1.6",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -296,6 +344,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "xdg_directories",
+      "rootUri": "file:///Users/niner9/.pub-cache/hosted/pub.dev/xdg_directories-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
       "name": "xml",
       "rootUri": "file:///Users/niner9/.pub-cache/hosted/pub.dev/xml-6.5.0",
       "packageUri": "lib/",
@@ -308,7 +362,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2025-04-14T16:11:04.430636Z",
+  "generated": "2025-04-16T03:49:52.054597Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
   "flutterRoot": "file:///Users/niner9/Documents/dev/flutter",

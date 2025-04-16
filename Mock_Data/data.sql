@@ -17,8 +17,8 @@ CREATE TABLE dashcams (
 CREATE TABLE videos (
     video_id SERIAL PRIMARY KEY,
     dashcam_serial VARCHAR(50) NOT NULL,
-    start_time TIMESTAMP NOT NULL,
-    end_time TIMESTAMP NOT NULL,
+    start_time VARCHAR(20) NOT NULL,
+    end_time VARCHAR(20) NOT NULL,
     local_path TEXT, -- Local file path on dashcam
     event_type ENUM('normal', 'drowsy') NOT NULL, -- Event type ENUM
     video_data LONGBLOB,
@@ -26,7 +26,7 @@ CREATE TABLE videos (
 );
 
 CREATE TABLE user_stats (
-    dashcam_serial VARCHAR(50) UNIQUE NOT NULL,
+    dashcam_serial VARCHAR(50) NOT NULL,
     drowsy INT,
     yawing INT,
     start_time TIMESTAMP NOT NULL,

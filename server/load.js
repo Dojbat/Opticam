@@ -14,7 +14,7 @@ db.connect(err => {
 });
 
 // Path to the video file
-const videoPath = '/Users/niner9/Downloads/car.mp4';
+const videoPath = '/Users/niner9/Downloads/drowsy.mp4';
 
 // Read the video file as binary data
 const videoBuffer = fs.readFileSync(videoPath);
@@ -27,10 +27,10 @@ const query = `
 
 const videoData = [
     '0', // dashcam_serial
-    '2025-04-14 10:00:00', // start_time
-    '2025-04-14 10:05:00', // end_time
+    '2025-04-14 20:00:00', // start_time
+    '2025-04-14 20:05:00', // end_time
     '/path/to/video1.mp4', // local_path
-    'normal', // event_type
+    'drowsy', // event_type
     videoBuffer // video_data
 ];
 

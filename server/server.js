@@ -5,11 +5,11 @@ const bcrypt = require('bcrypt');
 const app = express();
 app.use(cors());
 app.use(express.json());
-// curl http://localhost:3000/users
+//  curl http://localhost:3000/notification/1
 const db = mysql.createConnection({
     host: '127.0.0.1', // set the host as localhost
     user: 'root',
-    password: '', // Phu's SQL password
+    password: '', //  SQL password
     database: 'opticam' // 'name of the database' access the database
 });
 
@@ -97,7 +97,7 @@ app.post('/login', (req, res) => {
 });
 
 // Endpoint to retrieve collision videos for a specific user
-app.get('/collision-videos/:userId', (req, res) => {
+app.get('/notification/:userId', (req, res) => {
     const userId = req.params.userId;
 
     // Query to get the user's dashcam_serial
