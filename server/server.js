@@ -9,7 +9,7 @@ app.use(express.json());
 const db = mysql.createConnection({
     host: '127.0.0.1', // set the host as localhost
     user: 'root',
-    password: '', //  SQL password
+    password: 'Nine090649!', //  SQL password
     database: 'opticam' // 'name of the database' access the database
 });
 
