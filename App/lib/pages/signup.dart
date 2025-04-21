@@ -80,6 +80,7 @@ class _SignUpPageState extends State<SignUpPage> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Error: $e')),
       );
+      print('Error: $e');
     } finally {
       setState(() {
         _isLoading = false;

@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+import 'package:urdproject/components/HomePage/HomeBg.dart';
+import 'package:urdproject/components/NotificationsPage/FakeNotificationsBottomNavigationBar.dart';
+import 'package:urdproject/components/NotificationsPage/NotificationsBottomNavigationBar.dart';
+import 'package:urdproject/components/NotificationsPage/NotificationsList.dart';
+
+class FakenotiPage extends StatelessWidget {
+  const FakenotiPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: notificationsAppBar(),
+      body: Stack(
+        children: [
+          HomeBackground(),
+          NotificationsList(),
+        ],
+      ),
+      bottomNavigationBar: Fakenotificationsbottomnavigationbar(),
+    );
+  }
+
+  AppBar notificationsAppBar() {
+    return AppBar(
+      toolbarHeight: 90,
+      backgroundColor: Color(0xFFFFFFFF),
+      shadowColor: Colors.black54,
+      elevation: 4,
+      automaticallyImplyLeading: false,
+      title: Center(
+        child: Text(
+        'Notifications',
+        style: TextStyle(
+            fontSize: 26,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF000000)),
+        )
+      )
+    );
+  }
+}

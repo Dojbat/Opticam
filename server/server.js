@@ -153,6 +153,6 @@ app.get('/notification/:userId', (req, res) => {
 });
 
 
-app.listen(3000, () => console.log('Server started on port 3000'));
+app.listen(3000, '0.0.0.0', () => console.log('Server started on port 3000'));
 
 // use node server.js to run the server
